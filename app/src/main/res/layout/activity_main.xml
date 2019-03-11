@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fish">
+    android:background="@drawable/fish"
+    >
 
     <TextView
         android:layout_width="match_parent"
@@ -11,79 +13,106 @@
         android:gravity="center_horizontal"
         android:text="낚시 앱 연습"
         android:textColor="#00ff88"
-        android:textSize="60dp" />
-
-
-    <Button
-        android:id="@+id/B_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:class="a"
-        android:text="물떄" />
-
-    <Button
-        android:id="@+id/B_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/B_center"
-        android:layout_centerInParent="true"
-        android:text="위"
-
+        android:textSize="60dp"
         />
 
     <Button
-        android:id="@+id/B_bottom"
+        android:id="@+id/B1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/B_center"
-        android:layout_centerInParent="true"
-        android:text="아래" />
-
-    <Button
-        android:id="@+id/B_up_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/B_up"
-        android:layout_toLeftOf="@+id/B_up"
+        android:background="@android:color/holo_orange_light"
+        android:layout_alignLeft="@+id/B4"
+        android:layout_alignTop="@+id/B2"
         android:text="왼쪽위" />
 
     <Button
-        android:id="@+id/B_center_left"
+        android:id="@+id/B2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/B_up_left"
-        android:layout_alignLeft="@+id/B_up_left"
-        android:text="왼쪽" />
+        android:background="@android:color/holo_orange_light"
+        android:layout_above="@+id/B5"
+        android:layout_alignLeft="@+id/B5"
+        android:layout_marginBottom="15dp"
+        android:text="위"
+        />
 
     <Button
+        android:id="@+id/B3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/B_center_left"
-        android:layout_alignLeft="@id/B_up_left"
-        android:text="왼쪽아래" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/B_up"
-        android:layout_toRightOf="@+id/B_up"
+        android:background="@android:color/holo_orange_light"
+        android:layout_alignTop="@+id/B2"
+        android:layout_alignLeft="@+id/B6"
         android:text="오른쪽위" />
 
     <Button
+        android:id="@+id/B4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/B_center"
-        android:layout_toRightOf="@+id/B_center"
+        android:background="@android:color/holo_orange_light"
+        android:layout_toLeftOf="@+id/B5"
+        android:layout_alignTop="@+id/B5"
+        android:layout_marginRight="15dp"
+        android:text="왼쪽" />
+
+    <Button
+        android:id="@+id/B5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_orange_light"
+        android:text="물떄" />
+
+    <Button
+        android:id="@+id/B6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:layout_toRightOf="@+id/B5"
+        android:layout_alignTop="@+id/B5"
+        android:layout_marginLeft="15dp"
         android:text="오른쪽" />
 
     <Button
+        android:id="@+id/B7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/B_bottom"
-        android:layout_toRightOf="@id/B_bottom"
-        android:text="오른쪽아래" />
+        android:background="@android:color/holo_orange_light"
+        android:layout_alignLeft="@+id/B4"
+        android:layout_alignTop="@+id/B8"
+        android:text="왼쪽아래" />
+
+    <Button
+        android:id="@+id/B8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:layout_below="@+id/B5"
+        android:layout_alignLeft="@+id/B5"
+        android:layout_marginTop="15dp"
+        android:text="아래" />
+
+    <Button
+        android:id="@+id/B9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:layout_alignLeft="@+id/B6"
+        android:layout_alignTop="@+id/B8"
+        android:text="배고픈 개발자\n커피사주기" />
+
+    <Button
+        android:id="@+id/B_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffff00"
+        android:textSize="30dp"
+        />
 
 
-</>
+</RelativeLayout>
