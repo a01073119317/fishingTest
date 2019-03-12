@@ -7,12 +7,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     Button B_end;
     Button B9;
-
+    FrameLayout Framemain;
+    boolean oo = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,25 @@ public class MainActivity extends AppCompatActivity {
                  showMessage();
             }
         });
+
+        Framemain = (FrameLayout) findViewById(R.id.Framemain);
+
+        Button button = (Button) findViewById(R.id.B7);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                setContentView(R.layout.preparation);
+                //LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                //inflater.inflate(R.layout.preparation, Framemain, true);
+
+
+            }
+        });
+
+
+
+
 
     }
 
