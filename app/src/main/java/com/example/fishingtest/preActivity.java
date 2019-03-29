@@ -1,4 +1,8 @@
 package com.example.fishingtest;
 
-public class preActivity {
+
+import android.support.v7.app.AppCompatActivity;
+
+public class preActivity extends AppCompatActivity {
+
 }

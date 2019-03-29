@@ -1,28 +1,40 @@
 package com.example.fishingtest;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuAdapter;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     Button B_end;
     Button B9;
     FrameLayout Framemain;
-    boolean oo = true;
+    Button B_menu;
+    int abc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         B_end = (Button) findViewById(R.id.B_end);
         B9 = (Button) findViewById(R.id.B9);
+        Framemain = (FrameLayout) findViewById(R.id.Framemain);
 
         B9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 coffe();
             }
         });
-
         B_end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,26 +49,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Framemain = (FrameLayout) findViewById(R.id.Framemain);
+        B_menu = (Button) findViewById(R.id.B_menu);
+
 
         Button button = (Button) findViewById(R.id.B7);
+
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                setContentView(R.layout.preparation);
+                setContentView(R.layout.preparation); //  <<---preparation.xml을 보여주긴 함
+
                 //LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 //inflater.inflate(R.layout.preparation, Framemain, true);
-
 
             }
         });
 
 
 
-
+//        B_menu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, menu_Activity.class);
+//            }
+//        });
+        // 메뉴 버튼 누르면 액티비티 전환 구현 실패 19.03.23
 
     }
+
+
 
     public void coffe() {
         AlertDialog.Builder givemecoffe = new AlertDialog.Builder(this);
